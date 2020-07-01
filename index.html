@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COVID-19 Pesquisa Diária</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="logo">
+            <img src="img/kordsa.png" alt="Girl in a jacket" width="400" height="100">
+        </div>
+        <div id="start">Liberação de Acesso a Fábrica </div>      
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <div id="qImg"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <!--<div id="btimeGauge"></div>-->
+                <!--<div id="timeGauge"></div>-->
+            </div>
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+    <script src="quiz.js"></script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+<df-messenger
+  chat-icon="https://storage.googleapis.com/cloudprod-apiai/56a1e881-373f-4eff-a3fb-3cfa803b7b64_x.png"
+  chat-title="Jojo_BR"
+  agent-id="dea6badc-e4c9-47b7-8bab-4841dc43a3d6"
+  language-code="pt-br"
+></df-messenger>
+</body>
+</html>
