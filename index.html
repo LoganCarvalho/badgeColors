@@ -1,40 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>COVID-19 Pesquisa Diária</title>
-    <link rel="stylesheet" href="style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-<body>
-    <div id="container">
-        <div id="logo">
-            <img src="img/kordsa.png" alt="Girl in a jacket" width="400" height="100">
-        </div>
-        <div id="start">Liberação de Acesso a Fábrica </div>      
-        <div id="quiz" style="display: none">
-            <div id="question"></div>
-            <div id="qImg"></div>
-            <div id="choices">
-                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
-                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
-            </div>
-            <div id="timer">
-                <div id="counter"></div>
-                <!--<div id="btimeGauge"></div>-->
-                <!--<div id="timeGauge"></div>-->
-            </div>
-            <div id="progress"></div>
-        </div>
-        <div id="scoreContainer" style="display: none"></div>
-    </div>
-    <script src="quiz.js"></script>
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<body style="margin: 0; padding: 0;">
+   
+    <table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+        <tr>
+            <td style="padding: 10px 0 30px 0;">
+                
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border: 1px solid #cccccc; border-collapse: collapse;">
+                    <tr>
+                        
+                        <td align="center" bgcolor="#1590ed" id="colCentral" style="padding: 40px 0 30px 0; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;">
+                            <img src="https://raw.githubusercontent.com/LoganCarvalho/avaliacaoCovid19/master/assets/img/helmet.png" alt="validado" width="230" height="230" style="display: block;" />
+                            <h3 id="autorizado" style="color:white;">Autorizado a entrar na fábrica</h3>
+                            <img src="https://raw.githubusercontent.com/LoganCarvalho/avaliacaoCovid19/master/assets/img/shield.png" alt="validado" width="80" height="80" style="display: block;" />
+                            <h3 id="valido" style="color:white;">Válido somente no dia:</h3>
+                            <h2 id="dataAtual" style="color:white;">02/07/2019</h2>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
-<df-messenger
-  chat-icon="https://storage.googleapis.com/cloudprod-apiai/56a1e881-373f-4eff-a3fb-3cfa803b7b64_x.png"
-  chat-title="Jojo_BR"
-  agent-id="dea6badc-e4c9-47b7-8bab-4841dc43a3d6"
-  language-code="pt-br"
-></df-messenger>
+    <script type="text/javascript">
+        var diaAtual = new Date().getDay();
+        console.log('tempo atual', diaAtual);
+        if (diaAtual == 0) {
+            document.getElementById("colCentral").setAttribute("bgcolor", "#00BFFF"); 
+        } else if (diaAtual == 1) {
+            document.getElementById("colCentral").setAttribute("bgcolor", "#40E0D0"); 
+        }else if (diaAtual == 2){
+            document.getElementById("colCentral").setAttribute("bgcolor", "#32CD32"); 
+        }else if (diaAtual == 3){
+            document.getElementById("colCentral").setAttribute("bgcolor", "#EE82EE"); 
+        }else if (diaAtual == 4){
+            document.getElementById("colCentral").setAttribute("bgcolor", "#FF6347"); 
+        }else if (diaAtual == 5){
+            document.getElementById("colCentral").setAttribute("bgcolor", "#FFA500"); 
+        }else if (diaAtual == 6){
+            document.getElementById("colCentral").setAttribute("bgcolor", "#FFFF00"); 
+            document.getElementById("autorizado").setAttribute("style", "color:black;"); 
+            document.getElementById("valido").setAttribute("style", "color:black;"); 
+            document.getElementById("dataAtual").setAttribute("style", "color:black;"); 
+        }      
+        //azul (0,191,255) ou #00BFFF
+        //turquesa (64,224,208) ou #40E0D0
+        // verde limão (50,205,50) ou #32CD32
+        //violeta (238,130,238) ou #EE82EE
+        //tomate (255,99,71) ou #FF6347
+        //orange (255,165,0) ou #FFA500
+        //yellow (255,255,0) ou #FFFF00
+        </script>
 </body>
 </html>
