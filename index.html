@@ -20,6 +20,7 @@
                             <h3 id="autorizado" style="color:white;">Autorizado a entrar na fábrica</h3>
                             <img src="https://raw.githubusercontent.com/LoganCarvalho/avaliacaoCovid19/master/assets/img/shield.png" width="80" height="80" style="display: block;" />
                             <h3 id="valido" style="color:white;">Válido somente no dia:</h3>
+                            <h2 id="diaAtual" style="color:white;"></h2>
                             <h2 id="dataAtual" style="color:white;"></h2>
                             
                         </td>
@@ -37,27 +38,35 @@
         if (diaAtual == 0) {
             document.getElementById("colCentral").setAttribute("bgcolor", "#00BFFF"); 
             document.getElementById("dataAtual").textContent = dataVigente;
+            document.getElementById("diaAtual").textContent = "Domingo";
         } else if (diaAtual == 1) {
             document.getElementById("colCentral").setAttribute("bgcolor", "#40E0D0"); 
             document.getElementById("dataAtual").textContent = dataVigente;
+            document.getElementById("diaAtual").textContent = "Segunda";
         }else if (diaAtual == 2){
             document.getElementById("colCentral").setAttribute("bgcolor", "#32CD32"); 
             document.getElementById("dataAtual").textContent = dataVigente;
+            document.getElementById("diaAtual").textContent = "Terça";
         }else if (diaAtual == 3){
             document.getElementById("colCentral").setAttribute("bgcolor", "#EE82EE"); 
             document.getElementById("dataAtual").textContent = dataVigente;
+            document.getElementById("diaAtual").textContent = "Quarta";
         }else if (diaAtual == 4){
             document.getElementById("colCentral").setAttribute("bgcolor", "#FF6347"); 
             document.getElementById("dataAtual").textContent = dataVigente;
+            document.getElementById("diaAtual").textContent = "Quinta";
         }else if (diaAtual == 5){
             document.getElementById("colCentral").setAttribute("bgcolor", "#FFA500"); 
             document.getElementById("dataAtual").textContent = dataVigente;
+            document.getElementById("diaAtual").textContent = "Sexta";
         }else if (diaAtual == 6){
             document.getElementById("colCentral").setAttribute("bgcolor", "#FFFF00"); 
             document.getElementById("autorizado").setAttribute("style", "color:black;"); 
             document.getElementById("valido").setAttribute("style", "color:black;"); 
             document.getElementById("dataAtual").setAttribute("style", "color:black;"); 
             document.getElementById("dataAtual").textContent = dataVigente;
+            document.getElementById("diaAtual").setAttribute("style", "color:black;"); 
+            document.getElementById("diaAtual").textContent = "Sábado";
         }      
         //azul (0,191,255) ou #00BFFF
         //turquesa (64,224,208) ou #40E0D0
