@@ -17,9 +17,9 @@
                         
                         <td align="center" bgcolor="#1590ed" id="colCentral" style="padding: 40px 0 30px 0; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;">
                             <img src="https://raw.githubusercontent.com/LoganCarvalho/avaliacaoCovid19/master/assets/img/helmet.png" width="230" height="230" style="display: block;" />
-                            <h3 id="autorizado" style="color:white;">Autorizado a entrar na fábrica</h3>
+                            <h3 id="autorizado" style="color:white;">Link desativado: Refaça sua autodeclaração de saúde</h3>
                             <img src="https://raw.githubusercontent.com/LoganCarvalho/avaliacaoCovid19/master/assets/img/shield.png" width="80" height="80" style="display: block;" />
-                            <h3 id="valido" style="color:white;">Válido somente no dia:</h3>
+                            <h3 id="valido" style="color:white;">Para receber um novo link de acesso:</h3>
                             <h2 id="diaAtual" style="color:white;"></h2>
                             <h2 id="dataAtual" style="color:white;"></h2>
                             
@@ -36,37 +36,37 @@
         var dataVigente = hoje.getDate()+'/'+(hoje.getMonth()+1)+'/'+hoje.getFullYear();
         console.log('tempo atual', dataVigente);
         if (diaAtual == 0) {
-            document.getElementById("colCentral").setAttribute("bgcolor", "#00BFFF"); 
-            document.getElementById("dataAtual").textContent = dataVigente;
-            document.getElementById("diaAtual").textContent = "Domingo";
+            document.getElementById("colCentral").setAttribute("bgcolor", "#FF0000"); 
+            
+            document.getElementById("diaAtual").textContent = "Inválido";
         } else if (diaAtual == 1) {
-            document.getElementById("colCentral").setAttribute("bgcolor", "#40E0D0"); 
-            document.getElementById("dataAtual").textContent = dataVigente;
-            document.getElementById("diaAtual").textContent = "Segunda";
+            document.getElementById("colCentral").setAttribute("bgcolor", "#FF0000"); 
+            
+            document.getElementById("diaAtual").textContent = "Inválido";
         }else if (diaAtual == 2){
-            document.getElementById("colCentral").setAttribute("bgcolor", "#32CD32"); 
-            document.getElementById("dataAtual").textContent = dataVigente;
-            document.getElementById("diaAtual").textContent = "Terça";
+            document.getElementById("colCentral").setAttribute("bgcolor", "#FF0000"); 
+            
+            document.getElementById("diaAtual").textContent = "Inválido";
         }else if (diaAtual == 3){
-            document.getElementById("colCentral").setAttribute("bgcolor", "#EE82EE"); 
-            document.getElementById("dataAtual").textContent = dataVigente;
-            document.getElementById("diaAtual").textContent = "Quarta";
+            document.getElementById("colCentral").setAttribute("bgcolor", "#FF0000"); 
+            
+            document.getElementById("diaAtual").textContent = "Inválido";
         }else if (diaAtual == 4){
-            document.getElementById("colCentral").setAttribute("bgcolor", "#FF6347"); 
-            document.getElementById("dataAtual").textContent = dataVigente;
-            document.getElementById("diaAtual").textContent = "Quinta";
+            document.getElementById("colCentral").setAttribute("bgcolor", "#FF0000"); 
+            
+            document.getElementById("diaAtual").textContent = "Inválido";
         }else if (diaAtual == 5){
-            document.getElementById("colCentral").setAttribute("bgcolor", "#FFA500"); 
-            document.getElementById("dataAtual").textContent = dataVigente;
-            document.getElementById("diaAtual").textContent = "Sexta";
+            document.getElementById("colCentral").setAttribute("bgcolor", "#FF0000"); 
+            
+            document.getElementById("diaAtual").textContent = "Inválido";
         }else if (diaAtual == 6){
-            document.getElementById("colCentral").setAttribute("bgcolor", "#FFFF00"); 
+            document.getElementById("colCentral").setAttribute("bgcolor", "#FF0000"); 
             document.getElementById("autorizado").setAttribute("style", "color:black;"); 
             document.getElementById("valido").setAttribute("style", "color:black;"); 
             document.getElementById("dataAtual").setAttribute("style", "color:black;"); 
-            document.getElementById("dataAtual").textContent = dataVigente;
+         
             document.getElementById("diaAtual").setAttribute("style", "color:black;"); 
-            document.getElementById("diaAtual").textContent = "Sábado";
+            document.getElementById("diaAtual").textContent = "Inválido";
         }      
         //azul (0,191,255) ou #00BFFF
         //turquesa (64,224,208) ou #40E0D0
